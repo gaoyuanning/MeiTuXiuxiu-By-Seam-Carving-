@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+		android:gravity="center" 
+        >
+        
+		<view class="com.jacp.image.view.CropImageView"
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent"
+			android:id="@+id/crop_image" 
+			/>
+    </LinearLayout>
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/save_all"
+		android:layout_alignParentBottom="true" 
+		>
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:onClick="onClick"
+            android:text="@string/save"
+            android:layout_alignParentLeft="true"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel"
+            android:onClick="onClick"
+            android:text="@string/cancel"
+            android:layout_alignParentRight="true"
+            />
+        
+	</RelativeLayout>
+
+</RelativeLayout>

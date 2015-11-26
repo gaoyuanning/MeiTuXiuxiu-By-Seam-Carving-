@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#514F4F"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/save_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/save_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_step_save"
+            android:onClick="onClick" />
+
+        <TextView
+            android:id="@+id/handle_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/cancel_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_step_cancel"
+            android:onClick="onClick" />
+    </RelativeLayout>
+
+    <!-- 记录保存全部操作的布局 -->
+
+    <RelativeLayout
+        android:id="@+id/save_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0" >
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="onClick"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/cancel" />
+    </RelativeLayout>
+
+    <!-- 图片显示区域 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 自定义的ImageView -->
+
+        <view
+            android:id="@+id/crop_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            class="com.eyingsoft.image.view.CropImageView" />
+    </LinearLayout>
+
+    <!-- 操作按钮布局 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 编辑按钮 -->
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/btn_edit"
+            android:onClick="onClick"
+            android:text="@string/edit" />
+        <!-- 调色按钮 -->
+
+        <Button
+            android:id="@+id/tone"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/btn_color"
+            android:onClick="onClick"
+            android:text="@string/tone" />
+    </LinearLayout>
+
+</LinearLayout>
